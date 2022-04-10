@@ -1,3 +1,9 @@
+/* 
+    Keri Russin
+    Web Development B.S.
+    WDV353 | Server-Side Languages | C202204
+*/
+
 const express = require('express');
 require('dotenv').config();
 const app = express();
