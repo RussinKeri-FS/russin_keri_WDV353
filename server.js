@@ -5,9 +5,64 @@ const app = express();
 app.get('/', (req, res, next) => {
     res.json({
         message: 'Using - GET',
+        metadata: {
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+        },
     });
 });
 
+app.get('/:id', (req, res, next) => {
+    const id = req.params.id;
+    res.json({
+        message: 'Using - GET',
+        metadata: {
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+            id: id,
+        },
+    });
+});
+
+// post, patch, delete
+app.post('/', (req, res, next) => {
+    res.json({
+        message: 'Using - POST',
+        metadata: {
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+        },
+    });
+});
+
+app.patch('/:id', (req, res, next) => {
+    const id = req.params.id;
+    res.json({
+        message: 'Using - PATCH',
+        metadata: {
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+            id: id,
+        },
+    });
+});
+
+app.delete('/:id', (req, res, next) => {
+    const id = req.params.id;
+    res.json({
+        message: 'Using - DELETE',
+        metadata: {
+            host: req.hostname,
+            port: process.env.port,
+            method: req.method,
+            id: id,
+        },
+    });
+});
 
 
 // middleware modules for error handling
