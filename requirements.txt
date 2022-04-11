@@ -1,0 +1,14 @@
+NodeJS Testing Assignment:
+
+Test with Jest
+
+Testing the Math Object
+
+Add
+Subtract
+Divide
+Multiply
+
+Advanced Math
+square root
+max 
